@@ -28,7 +28,7 @@ void main(){
   n++;
 
   // printing the new array
-  printf("THe new array is:");
+  printf("The new array is:");
   for (int i = 0; i < n; i++)
   {
     printf("%d ",arr[i]);

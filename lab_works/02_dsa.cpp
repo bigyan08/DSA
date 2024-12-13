@@ -1,3 +1,4 @@
+// deletion of any element from the list
 #include <iostream>
 using namespace std;
 

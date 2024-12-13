@@ -1,3 +1,4 @@
+// insertion of any element in any position in the list
 #include<iostream>
 
 using namespace std;
@@ -20,7 +21,7 @@ int main(){
     cin>>new_val>>pos;
 
     // doing the insertion opertion
-    for(int i=n;i>=pos;i--)
+    for(int i=n;i>=pos-1;i--)
     {
         arr[i+1] = arr[i];
     }

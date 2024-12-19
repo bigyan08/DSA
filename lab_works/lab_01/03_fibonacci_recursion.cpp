@@ -11,7 +11,7 @@ int fib(int n){
 }
 int main(){
     int n;
-    cout<<"enter the no. of fibonacci elements to display:";
+    cout<<"enter the value of n:";
     cin>>n;
     for(int i=0;i<=n-1;i++){
         cout<<fib(i)<<" ";

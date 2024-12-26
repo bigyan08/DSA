@@ -1,9 +1,8 @@
 #include<iostream>
-
 using namespace std;
-
+#define size 10 // array size
 int front=-1,rear=-1; // assigning values to front and rear
-int arr[10];
+int arr[size];
 
 bool isEmpty(){
     if (front == -1 && rear == -1)
@@ -16,8 +15,8 @@ bool isEmpty(){
 }
 
 void enqueue(int x){
-    if(rear == 9){ // checking if the array is full
-        return;
+    if(rear = size-1){ // checking if the array is full
+    cout<<"Queue is full"<<endl;
     }
     else if (isEmpty()){
         front = 0;

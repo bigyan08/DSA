@@ -1,4 +1,3 @@
-// Learning linked list through traversal, searching, insertion and deletion
 #include<iostream>
 using namespace std;
 
@@ -25,19 +24,35 @@ void traversal(Node* head){
     }
 }
 
+// C++ Function to insert a node at the end of the linked
+// list
+Node* insertAtEnd(Node* head, int value)
+{
+    // Create a new node with the given value
+    Node* newNode = new Node(value);
+
+    // If the list is empty, make the new node the head
+    if (head == nullptr) 
+        return newNode;
+
+    // Traverse the list until the last node is reached
+    Node* curr = head;
+    while (curr->next != nullptr) {
+        curr = curr->next;
+    }
+
+    // Link the new node to the current last node
+    curr->next = newNode;
+    return head;
+}
 int main(){
 
 // Creating some sample nodes
-    Node* node1 = new Node(5);
-    Node* node2 = new Node(8);
-    Node* node3 = new Node(10);
-
-// Assigning the next pointers to another node
-    node1->next = node2;
-    node2->next = node3;
-
-// Assigning the first node as head node
-    Node* head = node1;
+    Node* head = nullptr;
+    head = insertAtEnd(head, 5);
+    head = insertAtEnd(head, 10);
+    head = insertAtEnd(head, 15);
+    head = insertAtEnd(head, 25);
 
 // Calling the traversal function passing the head node
     traversal(head);
